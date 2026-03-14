@@ -1,6 +1,5 @@
 # Sorting Algorithms Benchmarking
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/downloads/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/your-repo/your-project/actions) <!-- Placeholder: Replace with actual build status if using CI/CD -->
 
