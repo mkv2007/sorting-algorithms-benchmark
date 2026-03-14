@@ -258,10 +258,6 @@ After running the benchmark, the following outputs are generated:
 
 These outputs are stored inside the `graphs/` directory.
 
-## 6. License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 7. Contact Information
+## 6. Contact Information
 
 For any inquiries, please contact: kowndinyamarepalli2007@gmail.com
