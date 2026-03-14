@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import pearsonr
 
-# --- Configuration ---
+
 C_FILES = [
     "bubble_sort.c",
     "heap_sort.c",
@@ -71,7 +71,6 @@ def run_benchmark(executable_path, data):
     input_str = f"{len(data)}\n" + " ".join(map(str, data))
     
     try:
-        # Use subprocess.run to send input via stdin and capture stdout/stderr
         process = subprocess.run(
             [executable_path],
             input=input_str,
@@ -80,7 +79,6 @@ def run_benchmark(executable_path, data):
             check=True
         )
         
-        # Extract timing and comparison count from stderr
         timing = float('inf')
         comparisons = 0
         stderr_lines = process.stderr.strip().split('\n')
@@ -95,11 +93,11 @@ def run_benchmark(executable_path, data):
         print(f"Error running {executable_path} with data size {len(data)}:")
         print(f"Stdout: {e.stdout}")
         print(f"Stderr: {e.stderr}")
-        return float('inf'), 0  # Return infinity for failed runs
+        return float('inf'), 0 
 
 def extract_n_and_type(filename):
     """Extracts N and data type (random, sorted, reverse_sorted) from a filename."""
-    match = re.match(r"n_(\d+)_(\w+)\.txt", filename) # Corrected regex: \.txt instead of \\.txt
+    match = re.match(r"n_(\d+)_(\w+)\.txt", filename)
     if match:
         return int(match.group(1)), match.group(2)
     return None, None
